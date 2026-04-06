@@ -28,6 +28,11 @@ jobs:
     - name: Run tests
       run: pytest tests/ -v
 
+    - name: Deploy to Hugging Face
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: python src/deploy.py
+
     - name: Save model artifact
       uses: actions/upload-artifact@v4
       with:
