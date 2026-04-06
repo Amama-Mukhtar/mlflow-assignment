@@ -25,7 +25,7 @@ print("Model saved to models/model.pkl")
 token = os.environ.get("HF_TOKEN")
 api = HfApi()
 
-repo_id = "Amama-Mukhtar/iris-classifier"
+repo_id = "AmamaMukhtar/iris-classifier"
 
 try:
     api.create_repo(repo_id=repo_id, token=token, exist_ok=True)
